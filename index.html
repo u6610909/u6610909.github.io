@@ -1,54 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Ratchanon's Dark Page</title>
+  <meta charset="UTF-8">
+  <title>For My Love 💖</title>
   <style>
     body {
-      background-color: #121212;
-      color: #f5f5f5;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
       margin: 0;
-      padding: 2rem;
+      background: #fff0f5;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-family: 'Segoe UI', sans-serif;
     }
 
-    h1 {
-      font-size: 2.5rem;
-      color: #c084fc;
-      margin-bottom: 1rem;
+    .heart-loader {
+      width: 150px;
+      height: 150px;
+      animation: beat 1s infinite ease-in-out;
+      transform-origin: center;
+      fill: #ff4d6d;
+      stroke: #ff4d6d;
     }
 
-    .info {
-      background-color: #1e1e1e;
-      padding: 2rem 3rem;
-      border-radius: 16px;
-      box-shadow: 0 0 20px rgba(192, 132, 252, 0.2);
-      max-width: 500px;
-      width: 100%;
+    @keyframes beat {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
     }
 
-    .info p {
-      font-size: 1.2rem;
-      margin: 0.5rem 0;
-      color: #e0e0e0;
+    .message {
+      margin-top: 30px;
+      font-size: 1.8rem;
+      color: #d6336c;
+      animation: fadeIn 2s ease-in;
     }
 
-    .info p strong {
-      color: #a78bfa;
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-  <h1>Welcome 🌌</h1>
-  <div class="info">
-    <p><strong>Name:</strong> Ratchanon Puwapattarapokin (Itim)</p>
-    <p><strong>Student ID:</strong> 6610909</p>
-    <p><strong>Section:</strong> 542</p>
-  </div>
+
+  <svg class="heart-loader" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 90">
+    <g class="heart-loader__group">
+      <path class="heart-loader__heartPath" d="M60,30 a30,30 0 0,1 0,60 L0,90 0,30 a30,30 0 0,1 60,0" />
+    </g>
+  </svg>
+
+  <div class="message">For you, my ❤️. BJ tonight 🥺</div>
+
 </body>
 </html>
