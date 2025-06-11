@@ -1,0 +1,78 @@
+
+GitHub Pages Cheat Sheet for u6610909.github.io
+===============================================
+
+🟢 Basic Git Commands
+----------------------
+📂 เข้า repo:
+cd "/Users/ratchanonmac/Desktop/Web application CSX4107/u6610909.github.io"
+
+🔍 ดูสถานะ repo:
+git status
+
+🧼 เพิ่มไฟล์ทั้งหมด:
+git add .
+
+💬 Commit พร้อมข้อความ:
+git commit -m "your message"
+
+🚀 Push ขึ้น GitHub:
+git push
+
+
+🌐 Set Folder as Homepage (e.g. introduction)
+---------------------------------------------
+cp introduction/index.html .
+git add index.html
+git commit -m "Set introduction as homepage"
+git push
+
+✅ Site now available at: https://u6610909.github.io/
+
+
+❌ Delete Folder (e.g. site3)
+-----------------------------
+rm -r site3
+git add .
+git commit -m "Remove site3"
+git push
+
+⛔ https://u6610909.github.io/site3/ will no longer work
+
+
+📁 Deploy Site in a Subfolder (e.g. site2)
+------------------------------------------
+1. Put your site files in site2/index.html
+2. Push it:
+
+git add site2/
+git commit -m "Add site2 to GitHub Pages"
+git push
+
+✅ Site available at: https://u6610909.github.io/site2/
+
+
+🖤 Create New Folder + Add a Website
+------------------------------------
+mkdir site4
+cp index.html site4/    # or create a new index.html inside
+git add site4/
+git commit -m "Add site4 site"
+git push
+
+✅ Access: https://u6610909.github.io/site4/
+
+
+🔄 Overwrite index.html With Another
+------------------------------------
+cp foldername/index.html .
+git add index.html
+git commit -m "Update homepage with foldername site"
+git push
+
+
+💡 Tips
+--------
+- You can link to folders like: <a href="/site2/">Site 2</a>
+- Make sure index.html is lowercase and in the correct folder
+- You can preview sites by dragging index.html into your browser before pushing
