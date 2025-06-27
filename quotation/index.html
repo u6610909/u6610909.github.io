@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quotation</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <style>
+    body {
+      font-family: 'Orbitron', sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+    <div id="tsparticles"></div>
+
+<div class="header-block text-center">
+  <h1 style="text-shadow: 0 0 5px #ff44ff, 0 0 10px #8844ff;">🧠 MONSTER_SHOP 🪼</h1>
+  <p style="font-style: italic; color: #ffffff;">“Powering the galaxy, one gooey deal at a time.” 👾🪐🌠</p>
+  <p style="font-style: italic; color: #ffffff;">📞 +66-123-GOOEY (or scream into the void)</p>
+  <img src="./img/monster-versus.gif" style="width:175px; height:auto; margin: 10px auto;">
+  <p id="currentDate" style="font-size: 14px; color: #ffffff;"></p>
+</div>
+
+<div class="address-row">
+  <div class="address-block text-left">
+    <b>Customer:</b><br>
+    Sir Blobulus the Gooey 🛸<br>
+    Slime Cave 101, Monster Valley<br>
+    Sector Z-9, Outer Tentacle Galaxy<br>
+    Planet Gloob, ZIP 66666
+  </div>
+
+  <div class="address-block text-right">
+    <b>Ship to:</b><br>
+    Sir Blobulus the Gooey 🛸<br>
+    Hidden Cave beneath Skull Mountain<br>
+    Toxic River District, Zone–X<br>
+    Planet Gloob, ZIP 66666
+  </div>
+</div>
+
+<br><br>
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  ➕ Add Item
+</button>
+
+<table class="table table-bordered mt-3">
+  <thead class="thead-dark">
+    <tr>
+      <th>Quantity</th>
+      <th>Description</th>
+      <th>Unit Price</th>
+      <th>Amount</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody id="dataTable"></tbody>
+  <tfoot>
+    <tr>
+      <td colspan="4" class="text-right">Subtotal</td>
+      <td id="subTotal">0.00</td>
+    </tr>
+    <tr>
+      <td colspan="4" class="text-right">VAT</td>
+      <td id="vatAmount">0.00</td>
+    </tr>
+    <tr>
+      <td colspan="4" class="text-right">Shipping & Handling</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td colspan="4" class="text-right">Total Due</td>
+      <td id="totalDue">0.00</td>
+    </tr>
+  </tfoot>
+</table>
+
+<p class="text-center mt-4" style="color: #f0f0f0;">
+  <b>💳 Please make all intergalactic checks payable to:</b><br>
+  <i>MONSTER_SHOP Interstellar HQ 👾</i><br><br>
+
+  <b>📞 For any cosmic inquiries regarding this invoice, contact:</b><br>
+  <i>+66-123-GOOEY (or scream into the void)</i><br><br>
+
+  <b>🚀 THANK YOU FOR YOUR SPACE-TASTIC BUSINESS 💖</b>
+</p>
+
+<footer>👾 WHO ARE YOU 👾</footer>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add Product</h5>
+        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="productSelect">Select Product</label>
+          <select id="productSelect" class="form-control"></select>
+        </div>
+        <div class="form-group">
+          <label for="quantityInput">Quantity</label>
+          <input type="number" id="quantityInput" class="form-control" min="1" value="1">
+        </div>
+        <div class="form-group">
+          <label for="unitPriceInput">Unit Price</label>
+          <input type="text" id="unitPriceInput" class="form-control" readonly>
+        </div>
+        <div class="form-group">
+          <label for="amountOutput">Amount</label>
+          <input type="text" id="amountOutput" class="form-control" readonly>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" id="saveButton">Add Item</button>
+        <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script>
+  document.getElementById("currentDate").innerText = new Date().toDateString();
+</script>
+<script src="script2.js"></script>
+
+<!-- Scripts for star fall -->
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+<script>
+  tsParticles.load("tsparticles", {
+    background: {
+      color: {
+        value: "transparent"
+      }
+    },
+    fpsLimit: 60,
+    particles: {
+      number: {
+        value: 120,
+        density: {
+          enable: true,
+          area: 800
+        }
+      },
+      color: {
+        value: "#ffffff"
+      },
+      shape: {
+        type: "circle"
+      },
+      opacity: {
+        value: 0.5
+      },
+      size: {
+        value: { min: 1, max: 2 }
+      },
+      move: {
+        enable: true,
+        speed: 0.2,
+        direction: "none",
+        outMode: "bounce"
+      }
+    },
+    interactivity: {
+      detectsOn: "canvas",
+      events: {
+        onhover: {
+          enable: true,
+          mode: "bubble"
+        },
+        resize: true
+      },
+      modes: {
+        bubble: {
+          distance: 120,
+          duration: 2,
+          size: 4,
+          opacity: 1
+        }
+      }
+    },
+    detectRetina: true
+  });
+</script>
+
+
+</body>
+</html>

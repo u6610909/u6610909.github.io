@@ -1,0 +1,34 @@
+[
+  {
+    "description": "☠️ Skullpiercer",
+    "unitPrice": 900.00
+  },
+  {
+    "description": "🪓 Meatgrinder Mk.IV",
+    "unitPrice": 450.00
+  },
+  {
+    "description": "👾 Gloop Arms",
+    "unitPrice": 100.00
+  },
+  {
+    "description": "🌀 Blobberang",
+    "unitPrice": 200.00
+  },
+  {
+    "description": "🐙 Tentacle Slapper XL",
+    "unitPrice": 1200.00
+  },
+  {
+    "description": "🔋 Plasma Tail Spike",
+    "unitPrice": 780.00
+  },
+  {
+    "description": "💣 Mutant Muffin (Explosive)",
+    "unitPrice": 150.00
+  },
+  {
+    "description": "🕶️ Shadow Cloak v3",
+    "unitPrice": 999.99
+  }
+]
